@@ -1,0 +1,92 @@
+.contenedor-principal {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.encabezado {
+    height: 10%;
+}
+
+.menu-lateral {
+    width: 20%;
+    padding-left: 50px;
+}
+
+.espacio-trabajo {
+    width: 80%;
+}
+
+.espacio {
+    height: 10%;
+}
+
+.contenedor-botones {
+    height: 10%;
+    display: flex;
+    align-items: center;
+}
+
+.contenedor-clients {
+    display: flex;
+    align-items: center;
+
+}
+
+.contenedor-clients span {
+    margin: 0px;
+    padding: 0px;
+}
+
+.boton {
+    background-color: #538bad;
+    color: white;
+    border: 0px;
+    margin-right: 10px;
+    border-radius: 5px;
+    width: 8%;
+    height: 70%;
+
+}
+
+.boton-busqueda-avanzada {
+    background-color: #61a5cd;
+    color: white;
+    border: 0px;
+    margin-left: 20px;
+    border-radius: 5px;
+
+    height: 100%;
+    padding: 3px 10px 3px 10px;
+
+}
+
+.input-buscar {
+    border: 2px solid lightgray;
+    border-radius: 10px 0px 0px 10px;
+    padding: 3px;
+    margin-right: -1px;
+}
+
+.boton-buscar {
+    background-color: white;
+    border: 2px solid lightgray;
+    border-radius: 0px 10px 10px 0px;
+    color: gray;
+    padding: 3px;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-left: -1px;
+}
+
+.row {
+    margin-bottom: 20px;
+}
+
+.logo{
+    width: 100px;
+    height: auto;
+}
