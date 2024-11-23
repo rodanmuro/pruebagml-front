@@ -37,7 +37,7 @@ export class ClienteService {
           this.clientesSubject.next(data)
         },
         error:(error)=>{
-          alert("Error obteniendo los clientes");
+          alert("Error obteniendo los clientes")
         }
       }
     )
