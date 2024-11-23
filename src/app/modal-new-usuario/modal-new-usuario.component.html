@@ -11,24 +11,23 @@
 
         <div class="cuerpo-modal">
             <div>
-                <label for="">Name</label> <input type="text">
+                <label for="">Name</label> <input type="text" [(ngModel)]="cliente.businessId">
             </div>
 
             <div>
-                <label for="">Phone</label> <input type="text">
+                <label for="">Phone</label> <input type="number" [(ngModel)]="cliente.phone">
             </div>
 
             <div>
-                <label for="">Email</label> <input type="email">
+                <label for="">Email</label> <input type="email" [(ngModel)]="cliente.email">
             </div>
 
             <div>
-                <label for="">Start date</label> <input type="date">
+                <label for="">Start date</label> <input type="date" [(ngModel)]="cliente.startDate">
             </div>
 
             <div>
-                <label for="">End date</label> <input type="date">
-          
+                <label for="">End date</label> <input type="date" [(ngModel)]="cliente.endDate">
             </div>
   
             <div class="boton-modal" (click)="guardarUsuario()">

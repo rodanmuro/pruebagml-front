@@ -1,41 +1,52 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { IsVisibleService } from '../is-visible.service';
-import { ApiService } from '../api.service';
+import { IsVisibleService } from '../services/isVisible/is-visible.service';
+import { ClienteService } from '../services/cliente/cliente.service';
+import { FormsModule, NgModel } from '@angular/forms';
+import { Cliente } from '../interfaces/cliente';
 
 @Component({
   selector: 'app-modal-new-usuario',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, FormsModule],
   templateUrl: './modal-new-usuario.component.html',
   styleUrl: './modal-new-usuario.component.css'
 })
 export class ModalNewUsuarioComponent {
   isVisible:boolean=false;
 
-  constructor(private isVisibleService:IsVisibleService, private apiService:ApiService){
+  cliente:Cliente={
+    sharedKey: "",
+    businessId: "",
+    email: "",
+    phone: 0,
+    startDate: new Date(),
+    endDate: new Date(),
+    dataAdded: new Date()
+  };
+
+  constructor(private isVisibleService:IsVisibleService, private clienteService:ClienteService){
     this.isVisibleService.visible$.subscribe(
       (value)=>(this.isVisible=value)
     )
   }
 
+  generarSharedKey(nombreCliente:String):String{
+    return (nombreCliente.split(" ")[0].substring(0,1)+nombreCliente.split(" ")[1]).toLowerCase();
+  }
+
   guardarUsuario(){
+    this.cliente.sharedKey = this.generarSharedKey(this.cliente.businessId);
 
+    this.clienteService.guardarCliente(this.cliente).subscribe(
+      () => {
+        this.clienteService.obtenerClientes();    
+      }
+    );
     
-    
-
-    const cliente = {
-      sharedKey:"rodanmuro",
-      email:"rodanmuro@gmail.com",
-      phone:3156332247,
-      startDate:"2024-01-01",
-      endDate:"2024-01-01",
-      dataAdded:"2024-01-01"
-    };
-
-    this.apiService.guardarCliente(cliente).subscribe();
-
     this.isVisible=false;
+
+    
   }
 
 

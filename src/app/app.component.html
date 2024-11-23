@@ -29,8 +29,20 @@
     </div>
 
     <div class="row">
-      <input class="input-buscar" type="text" name="sharedkey" id="sharedkey" placeholder="Enter Shared Key" /><button
-        class="boton-buscar">Search</button> <button class="boton-busqueda-avanzada">Advanced Search</button>
+      <input 
+      class="input-buscar" 
+      type="text" 
+      name="sharedkey" 
+      id="sharedkey" 
+      placeholder="Enter Shared Key"
+      [(ngModel)]="sharedKey"
+      />
+      <button
+        class="boton-buscar"
+        (click)="obtenerClientesBySharedKey()"
+        >
+        Search
+      </button> <button class="boton-busqueda-avanzada">Advanced Search</button>
     </div>
 
     <div>
@@ -54,9 +66,8 @@
             <td>{{cliente.businessId}}</td>
             <td>{{cliente.email}}</td>
             <td>{{cliente.phone}}</td>
-            <td>{{cliente.startDate}}</td>
-            <td>{{cliente.endDate}}</td>
-            <td>{{cliente.dateadded}}</td>
+            <td>{{cliente.dataAdded}}</td>
+            <td><i class="fas fa-pen" aria-hidden="true"></i></td>
           </tr>
         </tbody>
       </table>
