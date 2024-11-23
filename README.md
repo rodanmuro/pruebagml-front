@@ -2,7 +2,9 @@
 
 Este frontend ha sido desarrollado en Angular 18, como prueba para la vacante de FullStack developer.
 
-Se recomiensa inicializar primero el backend, para que el presente fronend pueda cargar los datos generados por Spring Boot en la base de datos
+Se recomiensa inicializar primero el backend, para que el presente fronend pueda cargar los datos generados por Spring Boot en la base de datos.
+
+Corre por defecto en ela url http://localhost:4200
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.2.12.
 
