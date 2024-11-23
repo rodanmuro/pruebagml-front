@@ -35,7 +35,7 @@ export class ModalNewUsuarioComponent {
 
     this.apiService.guardarCliente(cliente).subscribe();
 
-    //this.isVisible=false;
+    this.isVisible=false;
   }
 
 

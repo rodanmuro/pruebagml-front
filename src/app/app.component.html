@@ -49,13 +49,14 @@
           <th>Edit</th>
         </thead>
         <tbody>
-          <tr>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
-            <td></td>
+          <tr *ngFor="let cliente of clientes" >
+            <td>{{cliente.sharedKey}}</td>
+            <td>{{cliente.businessId}}</td>
+            <td>{{cliente.email}}</td>
+            <td>{{cliente.phone}}</td>
+            <td>{{cliente.startDate}}</td>
+            <td>{{cliente.endDate}}</td>
+            <td>{{cliente.dateadded}}</td>
           </tr>
         </tbody>
       </table>

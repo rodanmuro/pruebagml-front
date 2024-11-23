@@ -1,21 +1,33 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ModalNewUsuarioComponent } from './modal-new-usuario/modal-new-usuario.component';
 import { IsVisibleService } from './is-visible.service';
-import { HttpClientModule } from '@angular/common/http';
+import { ApiService } from './api.service';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, ModalNewUsuarioComponent],
+  imports: [RouterOutlet, ModalNewUsuarioComponent, NgFor],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'pruebagml-front';
+  clientes:any[]=[];
 
-  constructor(private isVisibleService:IsVisibleService){
+  constructor(private isVisibleService:IsVisibleService, private apiService:ApiService){
 
+  }
+
+  ngOnInit(): void {
+    this.apiService.obtenerClientes().subscribe(
+      {
+        next:(data)=>{
+          this.clientes=data
+        }
+      }
+    );
   }
 
   mostrarModal(value:boolean){
