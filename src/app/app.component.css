@@ -45,15 +45,16 @@
     background-color: #538bad;
     color: white;
     border: 0px;
-    margin-right: 10px;
     border-radius: 5px;
+    margin-right: 10px;
+    
     width: 8%;
     height: 70%;
 
 }
 
 .boton-busqueda-avanzada {
-    background-color: #61a5cd;
+    background-color: #538bad;
     color: white;
     border: 0px;
     margin-left: 20px;

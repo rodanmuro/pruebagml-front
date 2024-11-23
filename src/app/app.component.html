@@ -21,9 +21,10 @@
   </div>
 
   <div class="espacio-trabajo">
+    <app-modal-new-usuario></app-modal-new-usuario>
     <div class="espacio"></div>
     <div class="contenedor-botones row">
-      <button class="boton">+ New</button>
+      <button class="boton" (click)="mostrarModal(true)">+ New</button>
       <button class="boton"> Export</button>
     </div>
 

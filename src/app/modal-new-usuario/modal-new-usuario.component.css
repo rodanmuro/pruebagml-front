@@ -1,0 +1,63 @@
+.outer{
+    width: 77%;
+    height: 80%;
+    background-color: rgba(124, 142, 153, 0.8);
+    border: 2px solid gray;
+    border-radius: 2px;
+    position: absolute;
+    top:10%;
+    left:23%;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+.contenedor-modal{
+    overflow-y: auto;
+    border: 2px solid gray;
+    border-radius: 4px;
+    background-color: #89c1e3;
+    z-index: 4;
+    width: 50%;
+    height: 50%;
+    position: relative;
+}
+
+.encabezado-modal{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 10px;
+    
+}
+
+.encabezado-modal div{
+    width: 98%;
+    border-bottom: 2px solid gray;
+    padding-bottom: 5px;
+    padding-top: 20px;
+}
+
+.cuerpo-modal div{
+    display: flex;
+    margin-bottom: 5px;
+}
+
+.cuerpo-modal div label{
+    margin-left: 10%;
+    width: 20%;
+}
+
+.cuerpo-modal div input{
+    width: 40%;
+}
+
+.boton-modal button{
+    background-color: #538bad;
+    color: white;
+    border: 0px;
+    border-radius: 5px;
+    width: 15%;
+    margin-left: 56.5%;
+}
