@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 import { ModalNewUsuarioComponent } from './modal-new-usuario/modal-new-usuario.component';
 import { IsVisibleService } from './is-visible.service';
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-root',
